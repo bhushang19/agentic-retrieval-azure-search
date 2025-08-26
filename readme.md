@@ -1,0 +1,5 @@
+ - Ensure to create Azure AI search service and Foundry project in the same resource group.
+ - Create a system assigned managed identity for the search service.
+ - Assign Cognitive Services User role to the managed identity of serach service on the Azure AI foundry project in Azure.
+ - This project deliberately uses key based authentication for the search service and openai service for simplicity.
+ - reference implementation is from MS Docs - https://learn.microsoft.com/en-us/azure/search/search-get-started-agentic-retrieval?pivots=programming-language-python
