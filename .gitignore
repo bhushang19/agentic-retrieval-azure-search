@@ -8,6 +8,8 @@ arenv/
 
 # Python
 __pycache__/
+*.pyc
+.vscode/
 *.py[cod]
 *$py.class
 *.so
