@@ -1,6 +1,8 @@
 import os
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from typing import List, Dict, Any
 
 from azure.search.documents.indexes.models import SearchIndex, SearchField, VectorSearch, VectorSearchProfile, HnswAlgorithmConfiguration, AzureOpenAIVectorizer, AzureOpenAIVectorizerParameters, SemanticSearch, SemanticConfiguration, SemanticPrioritizedFields, SemanticField
 from azure.search.documents.indexes import SearchIndexClient
@@ -36,7 +38,15 @@ api_version = os.getenv("API_VERSION")
 # Create FastAPI app
 app = FastAPI(title="Agentic Search API", version="1.0.0")
 
+# Pydantic models
+class AgenticRetrievalRequest(BaseModel):
+    query: str
 
+class AgenticRetrievalResponse(BaseModel):
+    response_string: str
+    messages: List[Dict[str, Any]]
+    activity: List[Dict[str, Any]]
+    references: List[Dict[str, Any]]
 
 # Global variables to store knowledge agent (configuration) and conversation context
 knowledge_agent = None
@@ -115,7 +125,7 @@ def create_knowledge_agent(index_client, agent_name: str, index_name: str):
                 index_name=index_name,
                 default_reranker_threshold=2.5
             )
-        ]
+        ],
     )
 
     index_client.create_or_update_agent(knowledge_agent)
@@ -150,17 +160,23 @@ def init_retrieval_pipeline(knowledge_agent_client, user_question: str, index_na
     retrieval_result = knowledge_agent_client.retrieve(
         retrieval_request=KnowledgeAgentRetrievalRequest(
             messages=[KnowledgeAgentMessage(role=msg["role"], content=[KnowledgeAgentMessageTextContent(text=msg["content"])]) for msg in messages if msg["role"] != "system"],
-            target_index_params=[KnowledgeAgentIndexParams(index_name=index_name, reranker_threshold=2.5)]
+            target_index_params=[KnowledgeAgentIndexParams(index_name=index_name, reranker_threshold=2.0)]
         )
     )
 
     # Add agent's retrieval response to conversation context
     messages.append({
         "role": "assistant",
-        "content": retrieval_result.response[0].content[0].text
+        "content": retrieval_result.response[0].content[0].text # this is not LLM generated response, instead these are semantic ranker processed results, re-ranked records by their semantic ranking score.
     })
 
-    return messages
+    # Return messages, activity, and references
+    return {
+        "messages": messages,
+        "response": retrieval_result.response[0].content[0].text,
+        "activity": [a.as_dict() for a in retrieval_result.activity],
+        "references": [r.as_dict() for r in retrieval_result.references]
+    }
 
 def create_openai_client():
     client = AzureOpenAI(
@@ -198,8 +214,8 @@ def load_data_endpoint():
 
 
 
-@app.post("/perform-agentic-retrieval")
-def perform_agentic_retrieval(question: str) -> str:
+@app.post("/perform-agentic-retrieval", response_model=AgenticRetrievalResponse)
+def perform_agentic_retrieval(request: AgenticRetrievalRequest) -> AgenticRetrievalResponse:
     try:
         global knowledge_agent, messages
         
@@ -218,13 +234,22 @@ def perform_agentic_retrieval(question: str) -> str:
         openai_client = create_openai_client()
         
         # Perform retrieval and update conversation context
-        messages = init_retrieval_pipeline(knowledge_agent_client, question, index_name)
+        retrieval_data = init_retrieval_pipeline(knowledge_agent_client, request.query, index_name)
+        
+        # Update global messages from retrieval data
+        messages = retrieval_data["messages"]
         
         # Generate final response from LLM
         final_answer = generate_response(openai_client, messages)
         
-        # Return just the answer string
-        return final_answer
+        # Return comprehensive response with all data
+        return AgenticRetrievalResponse(
+            response_string=final_answer,
+            messages=messages,
+            response=retrieval_data["response"],
+            activity=retrieval_data["activity"],
+            references=retrieval_data["references"]
+        )
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error performing retrieval: {str(e)}")
 
