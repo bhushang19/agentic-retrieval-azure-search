@@ -4,12 +4,12 @@ A FastAPI-based implementation of Azure AI Search's Agentic Retrieval system tha
 
 ## Features
 
-- **Conversational Search**: Maintains context across multiple queries for natural conversations
-- **Knowledge Agents**: Leverages Azure AI Search knowledge agents for intelligent retrieval
-- **Vector Search**: Uses Azure OpenAI embeddings for semantic search capabilities
-- **RESTful API**: Clean FastAPI implementation with automatic Swagger documentation
-- **Real-time Processing**: Lazy initialization and fresh client creation for optimal performance
-- **Comprehensive Responses**: Returns search results, activity logs, and source references
+- **Conversational Search**: Remembers previous questions and answers for natural back-and-forth conversations
+- **Knowledge Agents**: Uses Azure AI Search agents to find and retrieve relevant information
+- **Vector Search**: Finds semantically similar content using Azure OpenAI embeddings
+- **RESTful API**: Simple FastAPI setup with built-in documentation
+- **Smart Resource Management**: Knowledge agents are created once and reused, as they become permanently associated with your search index
+- **Complete Responses**: Returns the answer plus search activity and source documents
 
 ## Architecture Overview
 
@@ -170,19 +170,21 @@ flowchart TD
 
 ### Key Components
 
-- **Knowledge Agent**: Azure AI Search agent configured with GPT models and target indexes
-- **Conversation Context**: Persistent message history for multi-turn conversations
-- **Vector Search**: Semantic search using Azure OpenAI embeddings
-- **Lazy Initialization**: Automatic setup of knowledge agents on first request
+- **Knowledge Agent**: Azure AI Search agent set up with GPT models and your search index. Once created, it stays linked to the index and handles all future requests
+- **Conversation Context**: Keeps track of the entire conversation history for follow-up questions
+- **Vector Search**: Uses Azure OpenAI embeddings to find content by meaning, not just keywords
+- **Automatic Setup**: Knowledge agents are created on the first API call and then reused
+
+**Note**: Knowledge agents are not currently visible or manageable through the Azure Portal. Management and deletion must be done programmatically using the API endpoints provided. Portal support may be added in future Azure updates.
 
 ### Configuration
 
-The API uses environment-driven configuration with sensible defaults:
+The API uses environment variables for configuration:
 
 - **Index Configuration**: Vector search with HNSW algorithm and semantic search
-- **Knowledge Agent**: Configured with reranker threshold of 2.0
-- **Conversation Memory**: Maintains full context across API calls
-- **Error Handling**: Comprehensive error responses with proper HTTP status codes
+- **Knowledge Agent**: Set with reranker threshold of 2.0
+- **Conversation Memory**: Keeps full context across API calls
+- **Error Handling**: Clear error messages with proper HTTP status codes
 
 ## Development
 
