@@ -50,7 +50,7 @@ sequenceDiagram
     participant LLM as Azure OpenAI
     
     U->>API: POST /perform-agentic-retrieval
-    Note over API: Lazy init Knowledge Agent if needed
+    Note over API: Create Knowledge Agent if needed
     API->>KA: Create retrieval client
     API->>AS: Retrieve relevant documents
     AS-->>API: Return search results + references
@@ -141,7 +141,7 @@ flowchart TD
     end
     
     subgraph PIPELINE["Processing Pipeline"]
-        INIT[Lazy Init Knowledge Agent]
+        INIT[Create Knowledge Agent]
         CTX[Update Conversation Context]
         RET[Azure Search Retrieval]
         LLM[LLM Processing]
