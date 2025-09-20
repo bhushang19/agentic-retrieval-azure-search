@@ -34,6 +34,7 @@ index_name = os.getenv("INDEX_NAME")
 agent_name = os.getenv("AGENT_NAME")
 answer_model = os.getenv("ANSWER_MODEL")
 api_version = os.getenv("API_VERSION")
+max_conversation_history = int(os.getenv("MAX_CONVERSATION_HISTORY", "1"))
 
 # Create FastAPI app
 app = FastAPI(title="Agentic Search API", version="1.0.0")
@@ -136,10 +137,20 @@ def create_knowledge_agent_client(index_name: str, agent_name: str):
     return knowledge_agent_client
 
 def create_messages_for_knowledge_agent():
-    instructions = """An Q&A agent that can answer questions about the Earth at night.
-    Sources have a JSON format with a ref_id that must be cited in the answer.
-    If you do not have the answer, respond with "I don't know".
-    """
+    instructions = """You are an expert Insurance Assistant that helps customers with their insurance claims, policy information, and coverage details.
+    You have access to comprehensive insurance data including:
+    - Customer policy information (Health, Auto, Home, Life, Travel insurance)
+    - Claims history and processing details
+    - Coverage limits, deductibles, and exclusions
+    - Required documents for different claim types
+    - Step-by-step claim procedures and timelines
+    - Insurance agent contacts and specializations
+    - Network providers (doctors, repair shops, contractors)
+    - Policy exclusions and alternative coverage options
+    1. If asked for JSON format, structure your response accordingly
+    2. If you cannot find specific information, say "I don't have that information in the current data"
+
+    Always be helpful, accurate, and provide comprehensive guidance for insurance-related queries."""
     messages = [
         {
             "role": "assistant",
@@ -147,6 +158,29 @@ def create_messages_for_knowledge_agent():
         }
     ]
     return messages
+
+def manage_conversation_history(messages_list):
+    """Manage conversation history based on MAX_CONVERSATION_HISTORY setting"""
+    global max_conversation_history
+    
+    # Keep system/assistant instructions (first message) and manage conversation pairs
+    if len(messages_list) <= 1:
+        return messages_list
+    
+    # First message is always the assistant instructions
+    instructions = messages_list[0]
+    conversation_pairs = messages_list[1:]  # user/assistant pairs
+    
+    # Calculate how many conversation pairs to keep (user + assistant = 2 messages per conversation)
+    max_pairs = max_conversation_history
+    max_messages = max_pairs * 2  # user question + assistant response = 2 messages per conversation
+    
+    # Keep only the most recent conversation pairs
+    if len(conversation_pairs) > max_messages:
+        conversation_pairs = conversation_pairs[-max_messages:]
+    
+    # Reconstruct messages list
+    return [instructions] + conversation_pairs
 
 def init_retrieval_pipeline(knowledge_agent_client, user_question: str, index_name: str):
     global messages
@@ -169,6 +203,9 @@ def init_retrieval_pipeline(knowledge_agent_client, user_question: str, index_na
         "role": "assistant",
         "content": retrieval_result.response[0].content[0].text # this is not LLM generated response, instead these are semantic ranker processed results, re-ranked records by their semantic ranking score.
     })
+    
+    # Manage conversation history based on configuration
+    messages = manage_conversation_history(messages)
 
     # Return messages, activity, and references
     return {
@@ -246,7 +283,6 @@ def perform_agentic_retrieval(request: AgenticRetrievalRequest) -> AgenticRetrie
         return AgenticRetrievalResponse(
             response_string=final_answer,
             messages=messages,
-            response=retrieval_data["response"],
             activity=retrieval_data["activity"],
             references=retrieval_data["references"]
         )
