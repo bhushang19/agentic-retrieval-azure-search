@@ -1,0 +1,31 @@
+ProviderID,ProviderName,ProviderType,Specialty,Address,Phone,AcceptedPolicyTypes,InNetworkStatus,Rating
+PROV001,City General Hospital,Hospital,Multi-specialty,123 Main St New York NY,555-1001,Health,In-Network,4.5
+PROV002,AutoFix Garage,Auto Repair,Collision Repair,456 Oak Ave Los Angeles CA,555-1002,Auto,Preferred,4.2
+PROV003,Dr. Sarah Martinez,Physician,Family Medicine,789 Pine Rd Chicago IL,555-1003,Health,In-Network,4.8
+PROV004,SafeHome Contractors,Home Repair,General Contractor,321 Elm St Seattle WA,555-1004,Home,Preferred,4.3
+PROV005,Global Medical Center,Hospital,Emergency Care,654 Cedar Blvd Boston MA,555-1005,Health;Travel,In-Network,4.6
+PROV006,QuickFix Auto Body,Auto Repair,Body Work,987 Maple Dr Dallas TX,555-1006,Auto,In-Network,4.1
+PROV007,Dr. Michael Chang,Physician,Cardiology,147 Birch Ln Miami FL,555-1007,Health,In-Network,4.9
+PROV008,RestoreRight,Home Repair,Water Damage,258 Spruce Ave Denver CO,555-1008,Home,Preferred,4.4
+PROV009,MedExpress Clinic,Urgent Care,Walk-in Care,369 Willow St Phoenix AZ,555-1009,Health,In-Network,4.2
+PROV010,Premium Auto Service,Auto Repair,Luxury Vehicles,741 Aspen Way Atlanta GA,555-1010,Auto,Preferred,4.7
+PROV011,Dr. Jennifer Lee,Physician,Pediatrics,852 Redwood Ct San Francisco CA,555-1011,Health,In-Network,4.8
+PROV012,FireGuard Restoration,Home Repair,Fire Damage,963 Hickory Rd Portland OR,555-1012,Home,In-Network,4.5
+PROV013,University Medical,Hospital,Research Hospital,159 Walnut Blvd Nashville TN,555-1013,Health,In-Network,4.6
+PROV014,ClassicCar Garage,Auto Repair,Vintage Vehicles,357 Chestnut Dr Orlando FL,555-1014,Auto,Specialty,4.3
+PROV015,Dr. Robert Kim,Physician,Orthopedics,468 Magnolia Ave Philadelphia PA,555-1015,Health,In-Network,4.7
+PROV016,StormShield Roofing,Home Repair,Roof Repair,579 Dogwood Ln Houston TX,555-1016,Home,Preferred,4.2
+PROV017,Regional Eye Center,Specialty Clinic,Ophthalmology,681 Sycamore Rd San Diego CA,555-1017,Health,In-Network,4.8
+PROV018,TotalCare Auto,Auto Repair,Full Service,792 Poplar St Detroit MI,555-1018,Auto,In-Network,4.0
+PROV019,Dr. Lisa Brown,Physician,Dermatology,813 Cypress Ct Minneapolis MN,555-1019,Health,In-Network,4.6
+PROV020,SecureHome Services,Home Repair,Security Systems,924 Palm Dr Las Vegas NV,555-1020,Home,Specialty,4.4
+PROV021,Children's Hospital,Hospital,Pediatric Care,135 Fir Ave Cleveland OH,555-1021,Health,In-Network,4.9
+PROV022,EuroAuto Specialists,Auto Repair,European Cars,246 Pine Valley Rd Tampa FL,555-1022,Auto,Specialty,4.5
+PROV023,Dr. David Wilson,Physician,Psychiatry,357 Oak Ridge Dr Indianapolis IN,555-1023,Health,In-Network,4.7
+PROV024,FloodPro Restoration,Home Repair,Flood Damage,468 Maple Grove Ln Kansas City MO,555-1024,Home,Preferred,4.3
+PROV025,Sports Medicine Clinic,Specialty Clinic,Sports Injuries,579 Cedar Creek Rd Columbus OH,555-1025,Health,In-Network,4.5
+PROV026,ImportAuto Works,Auto Repair,Import Vehicles,681 Birch Haven St Pittsburgh PA,555-1026,Auto,In-Network,4.2
+PROV027,Dr. Maria Gonzalez,Physician,Internal Medicine,792 Willow Creek Dr Cincinnati OH,555-1027,Health,In-Network,4.8
+PROV028,CleanAir Services,Home Repair,HVAC Systems,813 Spruce Valley Ave Milwaukee WI,555-1028,Home,Preferred,4.4
+PROV029,Emergency Medical,Urgent Care,24/7 Emergency,924 Aspen Hill Rd St. Louis MO,555-1029,Health;Travel,In-Network,4.6
+PROV030,TruckFix Center,Auto Repair,Commercial Vehicles,135 Redwood Park Dr Norfolk VA,555-1030,Auto,Specialty,4.1

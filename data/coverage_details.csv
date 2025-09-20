@@ -1,0 +1,101 @@
+PolicyNumber,PolicyType,CoverageLimit,Deductible,CoPay,OutOfPocketMax,SpecialCoverage,ExclusionDetails,PreAuthRequired
+P001,Health,50000,500,25,2000,Maternity;Mental Health,Cosmetic Surgery;Experimental Treatments,Yes
+P002,Auto,25000,1000,0,0,Rental Car;Roadside Assistance,Racing;Commercial Use,No
+P003,Home,150000,1500,0,0,Personal Property;Liability,Flood;Earthquake,No
+P004,Life,100000,0,0,0,Accidental Death,Suicide (first 2 years),No
+P005,Travel,10000,250,0,0,Medical Emergency;Trip Cancellation,Pre-existing Conditions,No
+P006,Health,75000,750,30,2500,Prescription;Dental,Elective Surgery,Yes
+P007,Auto,50000,500,0,0,Comprehensive;Collision,Intentional Damage,No
+P008,Home,200000,2000,0,0,Additional Living Expenses,War;Nuclear Hazard,No
+P009,Life,150000,0,0,0,Disability Waiver,High-risk Activities,No
+P010,Travel,15000,300,0,0,Adventure Sports;Emergency Evacuation,Alcohol-related Incidents,No
+P011,Health,60000,600,20,1800,Vision;Hearing Aids,Weight Loss Surgery,Yes
+P012,Auto,40000,750,0,0,Uninsured Motorist,Street Racing,No
+P013,Home,180000,1800,0,0,Identity Theft;Credit Card,Terrorism,No
+P014,Life,200000,0,0,0,Terminal Illness,Drug-related Death,No
+P015,Travel,8000,200,0,0,Sports Equipment;Pet Coverage,Business Travel,No
+P016,Health,45000,450,35,2200,Emergency Room;Ambulance,Alternative Medicine,Yes
+P017,Auto,35000,600,0,0,Glass Coverage;Towing,Uber/Lyft Driving,No
+P018,Home,220000,2200,0,0,Home Office;Jewelry,Business Equipment,No
+P019,Life,125000,0,0,0,Child Rider,Aviation Accidents,No
+P020,Travel,12000,350,0,0,Cruise Coverage;Ski Pass,Extreme Sports,No
+P021,Health,55000,550,40,1900,Chiropractic;Acupuncture,Fertility Treatments,Yes
+P022,Auto,30000,800,0,0,Custom Equipment,Modified Vehicles,No
+P023,Home,160000,1600,0,0,Pool Liability;Shed,Home Business,No
+P024,Life,175000,0,0,0,Spouse Rider,Military Action,No
+P025,Travel,9000,275,0,0,Cancel for Any Reason,Work-related Travel,No
+P026,Health,65000,650,25,2100,Maternity;Pediatric,Experimental Drugs,Yes
+P027,Auto,45000,700,0,0,New Car Replacement,Commercial Delivery,No
+P028,Home,190000,1900,0,0,Ordinance Coverage,Earth Movement,No
+P029,Life,140000,0,0,0,Return of Premium,Self-inflicted Injury,No
+P030,Travel,11000,320,0,0,Rental Car;Hotel,High-risk Countries,No
+P031,Health,70000,700,30,2300,Mental Health;Substance Abuse,Cosmetic Procedures,Yes
+P032,Auto,38000,650,0,0,Loan Gap;Extended Warranty,Track Events,No
+P033,Home,210000,2100,0,0,Computer Coverage;Art,Intentional Loss,No
+P034,Life,160000,0,0,0,Guaranteed Insurability,Hazardous Occupation,No
+P035,Travel,13000,380,0,0,Adventure Activities;Gear,War Zones,No
+P036,Health,58000,580,45,2400,Prescription;Dental,Bariatric Surgery,Yes
+P037,Auto,42000,550,0,0,Rideshare Coverage,DUI Incidents,No
+P038,Home,175000,1750,0,0,Guest Residence;Boat,Nuclear Contamination,No
+P039,Life,185000,0,0,0,Accelerated Death Benefit,Felony Conviction,No
+P040,Travel,14000,400,0,0,Political Evacuation,Pandemics,No
+P041,Health,48000,480,50,2600,Vision;Hearing,Investigational Treatment,Yes
+P042,Auto,32000,900,0,0,Emergency Roadside,Professional Racing,No
+P043,Home,195000,1950,0,0,Sewer Backup;Mold,Government Action,No
+P044,Life,195000,0,0,0,Waiver of Premium,Aviation (private pilot),No
+P045,Travel,7500,225,0,0,Pet Travel;Medical Equipment,Pregnancy-related,No
+P046,Health,62000,620,35,2000,Emergency;Urgent Care,Organ Transplant,Yes
+P047,Auto,36000,750,0,0,Accident Forgiveness,Street Racing,No
+P048,Home,185000,1850,0,0,Home Warranty;Green Upgrade,Wear and Tear,No
+P049,Life,165000,0,0,0,Family Income Benefit,Illegal Activities,No
+P050,Travel,16000,450,0,0,Extreme Sports;Photography Equipment,Terrorism,No
+P051,Health,62000,620,35,2000,Vision;Hearing,Investigational Treatment,Yes
+P052,Auto,32000,900,0,0,Emergency Roadside,Professional Racing,No
+P053,Home,195000,1950,0,0,Sewer Backup;Mold,Government Action,No
+P054,Life,195000,0,0,0,Waiver of Premium,Aviation (private pilot),No
+P055,Travel,7500,225,0,0,Pet Travel;Medical Equipment,Pregnancy-related,No
+P056,Health,58000,580,45,2400,Prescription;Dental,Bariatric Surgery,Yes
+P057,Auto,42000,550,0,0,Rideshare Coverage,DUI Incidents,No
+P058,Home,175000,1750,0,0,Guest Residence;Boat,Nuclear Contamination,No
+P059,Life,185000,0,0,0,Accelerated Death Benefit,Felony Conviction,No
+P060,Travel,14000,400,0,0,Political Evacuation,Pandemics,No
+P061,Health,48000,480,50,2600,Vision;Hearing,Investigational Treatment,Yes
+P062,Auto,32000,900,0,0,Emergency Roadside,Professional Racing,No
+P063,Home,195000,1950,0,0,Sewer Backup;Mold,Government Action,No
+P064,Life,195000,0,0,0,Waiver of Premium,Aviation (private pilot),No
+P065,Travel,7500,225,0,0,Pet Travel;Medical Equipment,Pregnancy-related,No
+P066,Health,62000,620,35,2000,Vision;Hearing,Investigational Treatment,Yes
+P067,Auto,42000,550,0,0,Rideshare Coverage,DUI Incidents,No
+P068,Home,175000,1750,0,0,Guest Residence;Boat,Nuclear Contamination,No
+P069,Life,185000,0,0,0,Accelerated Death Benefit,Felony Conviction,No
+P070,Travel,14000,400,0,0,Political Evacuation,Pandemics,No
+P071,Health,55000,550,40,1900,Chiropractic;Acupuncture,Fertility Treatments,Yes
+P072,Auto,30000,800,0,0,Custom Equipment,Modified Vehicles,No
+P073,Home,160000,1600,0,0,Pool Liability;Shed,Home Business,No
+P074,Life,175000,0,0,0,Spouse Rider,Military Action,No
+P075,Travel,9000,275,0,0,Cancel for Any Reason,Work-related Travel,No
+P076,Health,65000,650,25,2100,Maternity;Pediatric,Experimental Drugs,Yes
+P077,Auto,45000,700,0,0,New Car Replacement,Commercial Delivery,No
+P078,Home,190000,1900,0,0,Ordinance Coverage,Earth Movement,No
+P079,Life,140000,0,0,0,Return of Premium,Self-inflicted Injury,No
+P080,Travel,11000,320,0,0,Rental Car;Hotel,High-risk Countries,No
+P081,Health,70000,700,30,2300,Mental Health;Substance Abuse,Cosmetic Procedures,Yes
+P082,Auto,38000,650,0,0,Loan Gap;Extended Warranty,Track Events,No
+P083,Home,210000,2100,0,0,Computer Coverage;Art,Intentional Loss,No
+P084,Life,160000,0,0,0,Guaranteed Insurability,Hazardous Occupation,No
+P085,Travel,13000,380,0,0,Adventure Activities;Gear,War Zones,No
+P086,Health,58000,580,45,2400,Prescription;Dental,Bariatric Surgery,Yes
+P087,Auto,42000,550,0,0,Rideshare Coverage,DUI Incidents,No
+P088,Home,175000,1750,0,0,Guest Residence;Boat,Nuclear Contamination,No
+P089,Life,185000,0,0,0,Accelerated Death Benefit,Felony Conviction,No
+P090,Travel,14000,400,0,0,Political Evacuation,Pandemics,No
+P091,Health,48000,480,50,2600,Vision;Hearing,Investigational Treatment,Yes
+P092,Auto,32000,900,0,0,Emergency Roadside,Professional Racing,No
+P093,Home,195000,1950,0,0,Sewer Backup;Mold,Government Action,No
+P094,Life,195000,0,0,0,Waiver of Premium,Aviation (private pilot),No
+P095,Travel,7500,225,0,0,Pet Travel;Medical Equipment,Pregnancy-related,No
+P096,Health,62000,620,35,2000,Vision;Hearing,Investigational Treatment,Yes
+P097,Auto,42000,550,0,0,Rideshare Coverage,DUI Incidents,No
+P098,Home,175000,1750,0,0,Guest Residence;Boat,Nuclear Contamination,No
+P099,Life,185000,0,0,0,Accelerated Death Benefit,Felony Conviction,No
+P100,Travel,14000,400,0,0,Political Evacuation,Pandemics,No

@@ -1,0 +1,26 @@
+ClaimID,PolicyNumber,ClaimType,ClaimAmount,ClaimDate,ClaimStatus,ClaimDescription,ApprovedAmount,ProcessingTime,AdjusterName
+CLM001,P001,Health,850.00,2023-03-15,Approved,Emergency room visit for chest pain,800.00,7,Sarah Johnson
+CLM002,P007,Auto,1200.00,2023-04-20,Approved,Rear-end collision damage,1150.00,14,Michael Chen
+CLM003,P013,Home,2500.00,2023-05-10,Pending,Water damage from burst pipe,0.00,21,Lisa Rodriguez
+CLM004,P005,Travel,450.00,2023-06-05,Approved,Flight cancellation compensation,450.00,3,David Kim
+CLM005,P002,Auto,800.00,2023-02-28,Denied,Claim filed after policy expiration,0.00,5,Michael Chen
+CLM006,P076,Health,1200.00,2023-07-12,Approved,Outpatient surgery,1100.00,10,Sarah Johnson
+CLM007,P023,Home,150.00,2023-08-18,Approved,Window replacement due to storm,150.00,4,Lisa Rodriguez
+CLM008,P032,Auto,950.00,2023-09-22,Approved,Vandalism repair,900.00,12,Michael Chen
+CLM009,P048,Home,3200.00,2023-10-05,Under Review,Kitchen fire damage,0.00,35,Lisa Rodriguez
+CLM010,P065,Travel,680.00,2023-11-15,Approved,Medical emergency abroad,650.00,8,David Kim
+CLM011,P001,Health,320.00,2023-12-01,Approved,Prescription medication coverage,320.00,2,Sarah Johnson
+CLM012,P012,Auto,1800.00,2024-01-10,Approved,Hit and run damage,1750.00,18,Michael Chen
+CLM013,P058,Home,890.00,2024-02-14,Approved,Roof repair after hail storm,850.00,9,Lisa Rodriguez
+CLM014,P025,Travel,200.00,2024-03-08,Rejected,Insufficient documentation,0.00,6,David Kim
+CLM015,P081,Health,750.00,2024-04-22,Approved,Physical therapy sessions,720.00,5,Sarah Johnson
+CLM016,P037,Auto,2200.00,2024-05-16,Pending,Total loss vehicle,0.00,28,Michael Chen
+CLM017,P073,Home,450.00,2024-06-30,Approved,Garage door replacement,430.00,7,Lisa Rodriguez
+CLM018,P040,Travel,1100.00,2024-07-25,Approved,Trip interruption due to illness,1050.00,11,David Kim
+CLM019,P086,Health,980.00,2024-08-14,Under Review,Specialist consultation,0.00,15,Sarah Johnson
+CLM020,P057,Auto,650.00,2024-09-07,Approved,Windshield replacement,600.00,3,Michael Chen
+CLM021,P098,Home,1750.00,2024-10-20,Approved,Fence replacement,1700.00,13,Lisa Rodriguez
+CLM022,P070,Travel,380.00,2024-11-12,Approved,Baggage delay compensation,380.00,4,David Kim
+CLM023,P016,Health,1450.00,2024-12-03,Pending,MRI scan coverage,0.00,8,Sarah Johnson
+CLM024,P077,Auto,1350.00,2025-01-15,Approved,Side collision repair,1300.00,16,Michael Chen
+CLM025,P093,Home,680.00,2025-02-28,Under Review,Plumbing leak damage,0.00,12,Lisa Rodriguez

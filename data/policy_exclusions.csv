@@ -1,0 +1,31 @@
+PolicyType,ExclusionCategory,ExclusionDescription,AlternativeCoverage,ApplicableStates,EffectiveDate
+Health,Pre-existing Conditions,Medical conditions diagnosed before policy start date,Special enrollment periods may waive,All States,2023-01-01
+Health,Cosmetic Surgery,Procedures for appearance enhancement only,Reconstructive surgery after injury covered,All States,2023-01-01
+Health,Experimental Treatments,Treatments not FDA approved or investigational,Clinical trial coverage available separately,All States,2023-01-01
+Health,Self-inflicted Injuries,Injuries caused intentionally by policyholder,Mental health crisis coverage available,All States,2023-01-01
+Auto,Racing Activities,Damage during competitive racing events,Special racing insurance available,All States,2023-01-01
+Auto,Commercial Use,Using personal vehicle for business deliveries,Commercial auto insurance required,All States,2023-01-01
+Auto,DUI/DWI,Accidents while under influence of substances,Coverage resumes after violation period,All States,2023-01-01
+Auto,Intentional Damage,Damage caused deliberately by insured,Criminal acts never covered,All States,2023-01-01
+Home,Flood Damage,Water damage from natural flooding,NFIP flood insurance available,All States,2023-01-01
+Home,Earthquake,Damage from seismic activity,Earthquake riders available,CA;WA;OR,2023-01-01
+Home,War and Terrorism,Damage from acts of war or terrorism,Government programs may provide coverage,All States,2023-01-01
+Home,Nuclear Hazard,Contamination from nuclear materials,Nuclear pool insurance available,All States,2023-01-01
+Home,Wear and Tear,Normal deterioration of property,Maintenance coverage plans available,All States,2023-01-01
+Home,Business Activities,Damage from home-based business,Business property insurance needed,All States,2023-01-01
+Travel,Pre-existing Medical,Medical conditions known before travel,Waiver available within 14 days of deposit,All States,2023-01-01
+Travel,High-risk Activities,Extreme sports and dangerous activities,Adventure travel insurance available,All States,2023-01-01
+Travel,Alcohol/Drug Related,Incidents while under influence,Substance abuse treatment not excluded,All States,2023-01-01
+Travel,War Zones,Travel to areas with active conflicts,Special coverage for journalists/workers,All States,2023-01-01
+Travel,Pandemics,Coverage during declared pandemics,Epidemic coverage riders available,All States,2023-01-01
+Life,Suicide,Self-inflicted death within first 2 years,Coverage applies after 2-year period,All States,2023-01-01
+Life,Hazardous Occupation,Death due to high-risk job activities,Occupational life insurance available,All States,2023-01-01
+Life,Aviation Accidents,Death in private aircraft operation,Aviation life insurance available,All States,2023-01-01
+Life,Criminal Activity,Death during commission of felony,Legal defense insurance separate,All States,2023-01-01
+Health,Weight Loss Surgery,Bariatric procedures for obesity,Medical necessity coverage available,All States,2023-01-01
+Health,Fertility Treatments,IVF and assisted reproduction,Fertility riders available in some states,IL;NY;CA,2023-01-01
+Auto,Uber/Lyft Driving,Rideshare activities with personal policy,Rideshare endorsements available,All States,2023-01-01
+Auto,Off-road Damage,Damage from recreational off-roading,ATV/UTV insurance available,All States,2023-01-01
+Home,Swimming Pool,Liability and damage related to pools,Umbrella liability coverage recommended,All States,2023-01-01
+Home,Trampoline,Injuries from backyard trampolines,Recreational equipment riders available,All States,2023-01-01
+Travel,Business Travel,Work-related travel incidents,Corporate travel insurance available,All States,2023-01-01
