@@ -1,0 +1,6 @@
+PolicyType,RequiredDocuments
+Health,ID Proof;Medical Reports;Hospital Bills;Prescription;Insurance Card
+Auto,ID Proof;Driving License;Accident Report;Vehicle Registration;Insurance Policy
+Home,ID Proof;Property Documents;Damage Photos;Repair Estimates;Insurance Policy
+Life,ID Proof;Death Certificate;Policy Document;Beneficiary Statement;Medical Records
+Travel,ID Proof;Travel Tickets;Medical Reports;Travel Itinerary;Insurance Policy
