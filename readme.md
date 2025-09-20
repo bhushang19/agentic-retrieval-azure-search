@@ -65,8 +65,14 @@ sequenceDiagram
 ### Prerequisites
 
 - Azure AI Search service
-- Azure OpenAI service
+- Azure OpenAI service (or Azure AI Foundry project)
 - Python 3.8+
+
+**⚠️ Important Azure Setup Requirements:**
+- Create Azure AI Search service and Foundry project in the same resource group
+- **Enable system-assigned managed identity** for the Azure AI Search service
+- **Assign "Cognitive Services User" role** to the search service's managed identity on the Azure AI Foundry project
+- Without these permissions, Knowledge Agents will fail with authentication errors
 
 ### Setup
 
@@ -97,14 +103,21 @@ sequenceDiagram
    AGENT_NAME=your-agent-name
    ANSWER_MODEL=your-answer-model
    API_VERSION=2024-11-01-preview
+   MAX_CONVERSATION_HISTORY=1
    ```
 
-4. **Run the API server**
+4. **Load custom data (optional)**
+   ```bash
+   # Use the data loader utility to ingest your own CSV data
+   python load_csv_data.py
+   ```
+
+5. **Run the API server**
    ```bash
    python api_agentic_retrieval.py
    ```
 
-5. **Access the API**
+6. **Access the API**
    - API: http://localhost:8000
    - Swagger UI: http://localhost:8000/docs
    - ReDoc: http://localhost:8000/redoc
@@ -183,8 +196,17 @@ The API uses environment variables for configuration:
 
 - **Index Configuration**: Vector search with HNSW algorithm and semantic search
 - **Knowledge Agent**: Set with reranker threshold of 2.0
-- **Conversation Memory**: Keeps full context across API calls
+- **Conversation Memory**: Configurable history limit via `MAX_CONVERSATION_HISTORY` (default: 1)
 - **Error Handling**: Clear error messages with proper HTTP status codes
+
+### Data Loading Utilities
+
+The project includes a `load_csv_data.py` utility for ingesting custom data:
+
+- **Flexible CSV Processing**: Reads multiple CSV files and converts them to search documents
+- **Automatic Embedding Generation**: Uses Azure OpenAI to create embeddings for each record
+- **Configurable Processing**: Processes one CSV at a time with progress tracking
+- **Generic Architecture**: Can be adapted for different data schemas and formats
 
 ## Development
 
@@ -198,12 +220,10 @@ curl -X POST "http://localhost:8000/perform-agentic-retrieval" \
   -d '{"query": "What is urban lighting?"}'
 ```
 
-## Azure Setup Requirements
+## Azure Authentication Notes
 
-- Ensure to create Azure AI search service and Foundry project in the same resource group
-- Create a system assigned managed identity for the search service
-- Assign Cognitive Services User role to the managed identity of search service on the Azure AI foundry project in Azure
-- This project deliberately uses key based authentication for the search service and openai service for simplicity
+- This project uses key-based authentication for the search service and OpenAI service for simplicity
+- The managed identity setup (documented in Prerequisites) is required for Knowledge Agent functionality only
 
 ## References
 

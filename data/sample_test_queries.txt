@@ -1,0 +1,82 @@
+# Sample Complex Queries for Agentic Retrieval Testing
+
+This file contains complex questions designed to test the agentic retrieval system's ability to break down complex queries into multiple sub-queries for comprehensive responses.
+
+## Multi-Step Analysis Queries
+
+### Query 1: Cross-Policy Portfolio Analysis
+Find all customers who have multiple policy types, calculate their total annual insurance costs, identify those spending over $1000 annually, and provide a comprehensive list of all documents they would need if they wanted to file claims for each of their policy types simultaneously.
+
+### Query 2: Claims Pattern Analysis with Recommendations
+Analyze all denied or pending claims from the past year, identify the policy holders' coverage details including deductibles and limits, determine what exclusions might have caused the denials, and provide step-by-step procedures for appealing these decisions including required agent contacts.
+
+### Query 3: Customer Segmentation with Action Plans
+Find all customers using @abc.onmicrosoft.com email addresses, analyze their complete policy portfolios including coverage limits and exclusions, identify their claim history and any patterns, and create personalized document preparation checklists based on their most likely future claim scenarios.
+
+## Temporal and Financial Analysis Queries
+
+### Query 4: Expiration Risk Assessment
+Identify customers whose policies expire within the next 6 months, group them by policy type and premium amounts, analyze their claims history to predict renewal risks, determine what exclusions might affect their coverage, and provide renewal guidance including required documentation and agent contacts for each risk category.
+
+### Query 5: Premium Optimization Analysis
+Compare the total premium costs for all customers with Health insurance policies, identify which customers need coverage optimization, cross-reference their claims history to determine if they're over-insured or under-insured, and provide recommendations with required forms and agent contacts for policy adjustments.
+
+## Complex Procedural Queries
+
+### Query 6: Emergency Response Preparation
+For customers with Home insurance policies who have filed claims for property damage, identify the highest-rated in-network contractors in their area, cross-reference their specialties with the claim types, and provide a complete emergency response plan including timeline, required documentation, and contact information.
+
+### Query 7: Multi-Policy Claims Coordination
+Find customers who have filed multiple claims across different policy types, analyze their total claim amounts versus their coverage limits, identify any patterns in claim denials or exclusions, and provide comprehensive guidance on optimizing their coverage including alternative options and required procedures.
+
+## Customer-Specific Comprehensive Analysis
+
+### Query 8: High-Value Customer Service
+Identify customers with premium amounts above $500 across all policy types, analyze their coverage adequacy relative to their premium costs, review their claims history and agent interactions, determine any service gaps, and provide personalized recommendations including optimal contact strategies and required documentation for enhanced service.
+
+### Query 9: Risk Profile Assessment
+Analyze customers with expired or cancelled policies, identify patterns in their coverage lapses, determine what factors led to policy termination, cross-reference with available alternative coverage options, and provide re-engagement strategies including required documents and specialized agent contacts.
+
+## Integration and Workflow Queries
+
+### Query 10: Complete Customer Journey Mapping
+For customers with active Travel insurance policies, map their complete insurance journey including policy start dates, premium history, any claims filed, required documents for future claims, preferred agents based on specialization, and create a comprehensive service timeline with proactive touchpoints.
+
+## JSON Format Testing Queries
+
+### Query 11: Structured Response Testing
+I'm John Doe (Policy P001) and I need comprehensive guidance for filing a health insurance claim for emergency room visit of $850. Please return the response in JSON format with fields: customer_info, incident_details, coverage_analysis, required_documents, immediate_actions, contacts, and timeline.
+
+### Query 12: Complex Scenario with JSON Output
+Analyze Laura Martinez's (Policy P007) auto insurance coverage, determine her claim filing options for a collision incident, identify required documentation and procedures, find preferred repair shops, and provide agent contacts. Format the response as JSON with structured fields for downstream system integration.
+
+---
+
+## Testing Instructions
+
+1. Use these queries one at a time with the `/perform-agentic-retrieval` endpoint
+2. Monitor the system's ability to break down complex questions into multiple searches
+3. Verify that responses include information from multiple data sources (customer data, coverage details, claims history, procedures, etc.)
+4. Check that the agentic system provides comprehensive, actionable guidance
+5. Test both human-readable and JSON-formatted responses
+
+## Expected Agentic Behavior
+
+The system should demonstrate:
+- Breaking complex queries into logical sub-questions
+- Searching across multiple data sources
+- Cross-referencing information between different CSV files
+- Providing comprehensive, structured responses
+- Including specific contact information and procedural guidance
+- Calculating financial implications (deductibles, coverage limits, etc.)
+- Offering actionable next steps with timelines
+
+## Success Criteria
+
+A successful agentic retrieval should:
+✓ Address all aspects of the complex question
+✓ Provide specific policy details and financial calculations
+✓ Include relevant contact information and procedures
+✓ Offer actionable guidance with clear next steps
+✓ Demonstrate cross-referencing between multiple data sources
+✓ Show evidence of multi-step reasoning and analysis
